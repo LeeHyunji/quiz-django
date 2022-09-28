@@ -7,3 +7,6 @@ class AccessLog(models.Model):
 
     location = models.CharField(max_length=256, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        print(f'{self.created_at} / {self.location}')
